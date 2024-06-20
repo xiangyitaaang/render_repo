@@ -147,7 +147,7 @@ app = dash.Dash(external_stylesheets=[dbc.themes.LITERA])
 
 
 #Add for Render deployment 
-#server = app.server
+server = app.server
 
 
 #adding content to app
