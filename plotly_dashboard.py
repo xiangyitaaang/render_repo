@@ -286,10 +286,19 @@ app.layout = html.Div([html.Br(),
                                         columns=[{"name": i, "id": i} 
                                             for i in df_cities.columns],
                                         data=df_cities.to_dict('records'),
+                                                               style_data={
+                                                                    'fontFamily': 'Helvetica, sans-serif',  # Change the font family for data cells
+                                                                    'fontSize': '14px',                 # Optional: Change font size
+                                                                },
+                                                                style_header={
+                                                                    'fontFamily': 'Helvetica, sans-serif',  # Change the font family for header cells
+                                                                    'fontSize': '16px',                 # Optional: Change font size
+                                                                    'fontWeight': 'bold'                # Optional: Make header font bold
+                                                                },
                                         style_cell=dict(textAlign='left'),
                                         #style_header=dict(backgroundColor="paleturquoise"),
                                         #style_data=dict(backgroundColor="lavender")
-                                        ), 
+                                        ),
                                         width=6
                                     ),
                                 ],
@@ -340,8 +349,8 @@ app.layout = html.Div([html.Br(),
                         
                         html.Br(),
                         
-                        html.Div('Variance', 
-                                  style={'backgroundColor': '#6B53FF', 'color': 'white','width': "Variance",'textAlign': 'center'}),
+                        html.Div('Daylight and temperature variance', 
+                                  style={'backgroundColor': '#6B53FF', 'color': 'white','width': "Daylight and temperature variance",'textAlign': 'center'}),
                        
                     
                         dbc.Row(
@@ -362,8 +371,8 @@ app.layout = html.Div([html.Br(),
                         
                         html.Br(),
                         
-                        html.Div('Snow', 
-                                  style={'backgroundColor': '#6B53FF', 'color': 'white','width': "Snow",'textAlign': 'center'}),
+                        html.Div('Precipitation', 
+                                  style={'backgroundColor': '#6B53FF', 'color': 'white','width': "Precipitation",'textAlign': 'center'}),
                        
                         
                         dbc.Row(
